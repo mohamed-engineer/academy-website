@@ -103,7 +103,7 @@ export default function Hero() {
         transition={{ type: "spring", stiffness: 100 }}
       >
         <Image
-          src="/laptop.png" // حط اللابتوب بتاعك هنا
+          src="/1.png" // حط اللابتوب بتاعك هنا
           alt="Laptop"
           width={750}
           height={500}

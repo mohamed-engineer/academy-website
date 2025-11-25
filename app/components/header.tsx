@@ -18,6 +18,7 @@ export default function Header() {
         backdrop-blur-md bg-[#0d0f12]/70
         border-b border-gray-700
         text-white
+        mt-10
       "
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
