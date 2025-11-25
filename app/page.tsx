@@ -1,5 +1,5 @@
-import Header from "./components/header";
 import Hero from "./components/hero";
+import Header from "./components/header";
 import CoursesSection from "./components/CoursesSection";
 import TeachersSection from "./components/TeachersSection";
 import Footer from "./components/footer";
