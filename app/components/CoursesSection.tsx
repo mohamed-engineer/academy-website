@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaStar, FaUsers, FaClock, FaCheckCircle, FiArrowRight } from "react-icons/fa";
+import { FaStar, FaUsers, FaClock, FaCheckCircle, FaArrowRight  } from "react-icons/fa";
 
 const courses = [
   {
@@ -326,7 +326,7 @@ export default function CoursesSection() {
           className="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold transition shadow-lg"
         >
           اطلع على جميع الكورسات
-          <FiArrowRight size={20} />
+          <FaArrowRight  size={20} />
         </motion.a>
       </motion.div>
     </section>
