@@ -192,10 +192,9 @@ export default function Hero() {
             rotateY: -mouse.x * 0.5,
           }}
           whileHover={{ scale: 1.02 }}
-          transition={{ type: "spring", stiffness: 100 }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.6, duration: 0.8 }}
           >
           {/* Image Container with Glow */}
           <div className="relative mx-auto max-w-3xl">
