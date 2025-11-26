@@ -105,8 +105,8 @@ export default function Hero() {
         <Image
           src="/1.png" // حط اللابتوب بتاعك هنا
           alt="Laptop"
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           className="drop-shadow-2xl"
         />
       </motion.div>
