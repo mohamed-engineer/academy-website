@@ -109,19 +109,19 @@ export default function CoursesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 px-6">
+      <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16 px-6 border-b border-gray-700">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-6xl mx-auto text-center"
         >
           <h1 className="text-5xl font-bold mb-4">كل الكورسات</h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-blue-200">
             اختر من مجموعة واسعة من الدورات التعليمية المتخصصة
           </p>
-          <p className="text-sm text-blue-200 mt-2">
+          <p className="text-sm text-blue-300 mt-2">
             {courses.length} كورس متاح • تعلم حسب سرعتك
           </p>
         </motion.div>
@@ -144,7 +144,7 @@ export default function CoursesPage() {
               className={`px-6 py-2 rounded-full font-semibold transition ${
                 filter === level
                   ? "bg-blue-600 text-white shadow-lg"
-                  : "bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-600"
+                  : "bg-gray-800 text-gray-200 border-2 border-gray-700 hover:border-blue-500 hover:bg-gray-700"
               }`}
             >
               {level}
@@ -166,7 +166,7 @@ export default function CoursesPage() {
               onHoverStart={() => setHoveredId(course.id)}
               onHoverEnd={() => setHoveredId(null)}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer border border-gray-100"
+              className="group bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer border border-gray-700 hover:border-blue-500"
             >
               {/* Course Image Section */}
               <div className={`h-40 ${course.image} relative overflow-hidden`}>
@@ -185,12 +185,12 @@ export default function CoursesPage() {
               {/* Content Section */}
               <div className="p-6">
                 {/* Title */}
-                <h2 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition">
+                <h2 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition">
                   {course.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                   {course.desc}
                 </p>
 
@@ -199,7 +199,7 @@ export default function CoursesPage() {
                   {course.tags.slice(0, 2).map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"
+                      className="text-xs bg-blue-900 text-blue-300 px-3 py-1 rounded-full"
                     >
                       {tag}
                     </span>
@@ -207,11 +207,11 @@ export default function CoursesPage() {
                 </div>
 
                 {/* Course Stats */}
-                <div className="grid grid-cols-3 gap-3 mb-4 py-3 border-y border-gray-200">
+                <div className="grid grid-cols-3 gap-3 mb-4 py-3 border-y border-gray-700">
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-1">
                       <FaUsers className="text-blue-500 text-sm" />
-                      <span className="text-xs text-gray-600">
+                      <span className="text-xs text-gray-400">
                         {course.students.toLocaleString()}
                       </span>
                     </div>
@@ -219,7 +219,7 @@ export default function CoursesPage() {
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-1">
                       <FaClock className="text-green-500 text-sm" />
-                      <span className="text-xs text-gray-600">
+                      <span className="text-xs text-gray-400">
                         {course.hours}س
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export default function CoursesPage() {
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-1">
                       <FaStar className="text-yellow-500 text-sm" />
-                      <span className="text-xs text-gray-600">
+                      <span className="text-xs text-gray-400">
                         {course.rating}
                       </span>
                     </div>
@@ -237,13 +237,13 @@ export default function CoursesPage() {
                 {/* Price Section */}
                 <div className="mb-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-blue-600">
+                    <span className="text-2xl font-bold text-blue-400">
                       ${course.price}
                     </span>
                     <span className="text-sm text-gray-500 line-through">
                       ${course.originalPrice}
                     </span>
-                    <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">
+                    <span className="text-xs bg-red-900 text-red-300 px-2 py-1 rounded">
                       {Math.round(
                         ((course.originalPrice - course.price) /
                           course.originalPrice) *
@@ -284,7 +284,7 @@ export default function CoursesPage() {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-2xl text-gray-600">
+            <p className="text-2xl text-gray-400">
               لا توجد كورسات في هذا المستوى حالياً
             </p>
           </motion.div>
@@ -294,12 +294,12 @@ export default function CoursesPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mt-20 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-12 text-center border-2 border-blue-200"
+          className="mt-20 bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-12 text-center border-2 border-blue-700"
         >
-          <h3 className="text-3xl font-bold mb-4 text-gray-900">
+          <h3 className="text-3xl font-bold mb-4 text-white">
             لم تجد الكورس المناسب؟
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             يمكنك التواصل معنا للحصول على توصيات شخصية أو اقتراح كورس جديد
           </p>
           <motion.button
