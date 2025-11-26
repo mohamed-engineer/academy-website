@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { FiMail, FiLock, FiEye, FiEyeOff, FiArrowRight, FiGoogle, FiGithub, FiUser, FiCheck } from "react-icons/fi";
+import { FiMail, FiLock, FiEye, FiEyeOff, FiArrowRight, FiGithub, FiUser, FiCheck } from "react-icons/fi";
+import { FaGoogle } from "react-icons/fa";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -156,7 +157,7 @@ export default function RegisterPage() {
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-semibold transition border border-gray-600"
               >
-                <FiGoogle size={20} />
+                <FaGoogle size={20} />
                 <span className="hidden sm:inline">Google</span>
               </motion.button>
               <motion.button
